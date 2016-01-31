@@ -91,8 +91,8 @@ for i in range(1,11):
     clf=linear_model.Perceptron(alpha =0,fit_intercept=True)
     clf.fit(traindata,trainlabel)
     prediction=clf.predict(testdata)
-    print 'Taking part %d as the test data'%(i)
-    print np.mean(prediction==testlabel)
-    print(metrics.classification_report(testlabel,prediction))
+    print 'Taking part %d as the test data the accuracy is:'%(i),
+    print '%.4f'%(metrics.accuracy_score(prediction,testlabel))
+    # print(metrics.classification_report(testlabel,prediction))
 # for i in range(577,867):
 #     print prediction[i-577],label[i]

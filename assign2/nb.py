@@ -88,7 +88,7 @@ for i in range(1,11):
     clf=MultinomialNB()
     clf.fit(traindata,trainlabel)
     prediction=clf.predict(testdata)
-    print 'Taking part %d as the test data: '%(i),
+    print 'Taking part %d as the test data the accuracy is: '%(i),
     # print np.mean(prediction==testlabel)
     print '%.4f'%(metrics.accuracy_score(prediction,testlabel))
     #print(metrics.classification_report(testlabel,prediction))
