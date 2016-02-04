@@ -1,0 +1,41 @@
+2 a)
+Taking part 1 as the test data the accuracy is: 0.9897
+Taking part 2 as the test data the accuracy is: 0.9966
+Taking part 3 as the test data the accuracy is: 0.9897
+Taking part 4 as the test data the accuracy is: 0.9931
+Taking part 5 as the test data the accuracy is: 0.9966
+Taking part 6 as the test data the accuracy is: 0.9966
+Taking part 7 as the test data the accuracy is: 1.0000
+Taking part 8 as the test data the accuracy is: 0.9897
+Taking part 9 as the test data the accuracy is: 0.9897
+Taking part 10 as the test data the accuracy is: 0.9932
+
+average:0.99349
+
+2 b)
+Taking part 1 as the test data the accuracy is: 0.9793
+Taking part 2 as the test data the accuracy is: 0.9862
+Taking part 3 as the test data the accuracy is: 0.9897
+Taking part 4 as the test data the accuracy is: 0.9793
+Taking part 5 as the test data the accuracy is: 0.9828
+Taking part 6 as the test data the accuracy is: 0.9897
+Taking part 7 as the test data the accuracy is: 0.9897
+Taking part 8 as the test data the accuracy is: 0.9862
+Taking part 9 as the test data the accuracy is: 0.9931
+Taking part 10 as the test data the accuracy is: 0.9760
+
+average: 0.9852
+
+c)
+Taking part 1 as the test data the accuracy is: 0.9655
+Taking part 2 as the test data the accuracy is: 0.9759
+Taking part 3 as the test data the accuracy is: 0.9793
+Taking part 4 as the test data the accuracy is: 0.9793
+Taking part 5 as the test data the accuracy is: 1.0000
+Taking part 6 as the test data the accuracy is: 0.9690
+Taking part 7 as the test data the accuracy is: 0.9793
+Taking part 8 as the test data the accuracy is: 0.9690
+Taking part 9 as the test data the accuracy is: 0.9793
+Taking part 10 as the test data the accuracy is: 0.9932
+
+average: 0.97898

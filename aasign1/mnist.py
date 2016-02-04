@@ -52,18 +52,15 @@ for k in range(len(lbl)):
 for i in range((len(lbl))):
     test_label.append(lbl[i])
 print len(test_data)
-print len(test_label)
-
-
-
-# metric =  [‘cityblock’, ‘cosine’, ‘euclidean’, ‘l1’, ‘l2’, ‘manhattan’]
+print len(test_label) # metric =  ['cityblock', 'cosine', 'euclidean', 'l1', 'l2', 'manhattan']
+# met =['euclidean', 'manhattan','l3']
 for k in range(1,5):
-	for x in [‘cityblock’, ‘cosine’, ‘euclidean’, ‘manhattan’]:
-		knn = KNeighborsClassifier(n_neighbors=k,metric=x)
-		knn.fit(train_data,label)
-		prediction=knn.predict(test_data)
-		print np.mean(prediction==test_label)
-		print metrics.accuracy_score(prediction,test_label)
-		print(metrics.classification_report(test_label,predictions))
+	for x in range(1,4):
+    	print "metic used l"+str(x)+" number of neighbours " + str(k)
+    	knn = KNeighborsClassifier(n_neighbors=k,p=x)
+    	knn.fit(train_data,label)
+    	prediction=knn.predict(test_data)
+    	print metrics.accuracy_score(prediction,test_label)
+    	print(metrics.classification_report(test_label,prediction))
 # for i in range(577,867):
 #     print prediction[i-577],label[i]
