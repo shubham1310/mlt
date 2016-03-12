@@ -56,7 +56,7 @@ print len(test_label) # metric =  ['cityblock', 'cosine', 'euclidean', 'l1', 'l2
 # met =['euclidean', 'manhattan','l3']
 for k in range(1,5):
 	for x in range(1,4):
-    	print "metic used l"+str(x)+" number of neighbours " + str(k)
+		print "metic used l"+str(x)+" number of neighbours " + str(k)
     	knn = KNeighborsClassifier(n_neighbors=k,p=x)
     	knn.fit(train_data,label)
     	prediction=knn.predict(test_data)
