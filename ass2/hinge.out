@@ -1,79 +1,19 @@
-train
-part1
-part9
-part8
-part2
-part7
-part4
-part3
-part6
-test
-part10
-part5
 Standard formulation
 Batch number 0 as the test data the accuracy is:  0.8454
 Hinge Loss
 Batch number 0  as the test data the accuracy is:  0.9674
-train
-part10
-part9
-part8
-part2
-part7
-part5
-part4
-part3
-test
-part1
-part6
 Standard formulation
 Batch number 1 as the test data the accuracy is:  0.8687
 Hinge Loss
 Batch number 1  as the test data the accuracy is:  0.9983
-train
-part1
-part10
-part9
-part8
-part5
-part4
-part3
-part6
-test
-part2
-part7
 Standard formulation
 Batch number 2 as the test data the accuracy is:  0.8618
 Hinge Loss
 Batch number 2  as the test data the accuracy is:  0.9845
-train
-part1
-part10
-part9
-part2
-part7
-part5
-part4
-part6
-test
-part8
-part3
 Standard formulation
 Batch number 3 as the test data the accuracy is:  0.8636
 Hinge Loss
 Batch number 3  as the test data the accuracy is:  0.9896
-train
-part1
-part10
-part8
-part2
-part7
-part5
-part3
-part6
-test
-part9
-part4
 Standard formulation
 Batch number 4 as the test data the accuracy is:  0.8653
 Hinge Loss

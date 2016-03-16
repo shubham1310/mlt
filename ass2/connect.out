@@ -1,35 +1,25 @@
+Batch number 0
+One versers One
+Accuracy: 0.76412
+One versers Rest
+Accuracy: 0.76101
 Batch number 1
-One versus One
-Accuracy is:
-0.7641
-One versus All
-Accuracy is:
-0.7686
+One versers One
+Accuracy: 0.81807
+One versers Rest
+Accuracy: 0.80490
 Batch number 2
-One versus One
-Accuracy is:
-0.8181
-One versus All
-Accuracy is:
-0.8127
+One versers One
+Accuracy: 0.71904
+One versers Rest
+Accuracy: 0.71512
 Batch number 3
-One versus One
-Accuracy is:
-0.7190
-One versus All
-Accuracy is:
-0.7065
+One versers One
+Accuracy: 0.77078
+One versers Rest
+Accuracy: 0.76804
 Batch number 4
-One versus One
-Accuracy is:
-0.7708
-One versus All
-Accuracy is:
-0.7611
-Batch number 5
-One versus One
-Accuracy is:
-0.6730
-One versus All
-Accuracy is:
-0.6807
+One versers One
+Accuracy: 0.67296
+One versers Rest
+Accuracy: 0.65349

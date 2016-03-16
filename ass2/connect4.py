@@ -5,12 +5,16 @@ from sklearn import metrics
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.svm import SVC
 from sklearn.svm import LinearSVC
+import warnings
+warnings.filterwarnings("ignore", category=DeprecationWarning) 
 path='../../data/assign3/connect-4.data'
 f=open(path,'r')
 f=f.read()
 
 def adddata(stri,data1,data2,data3):
-	stri=i.split(',')
+	if stri=='':
+		return [data1,data2,data3]
+	stri=stri.split(',')
 	z=[0 for i in range(42*3)]
 	for j in range(1,43):
 		if(stri[j-1]=='o'):
@@ -68,7 +72,7 @@ def labeldata(index):
 			a=1
 		elif(x[42]=="loss"):
 			a=-1
-		label.append[a]
+		label.append(a)
 	return [data,label]
 
 for i in range(0,5):
@@ -82,42 +86,63 @@ for i in range(0,5):
 	clf2.fit(data1+data3,[1 for j in range(len(data1))]+[0 for j in range(len(data3))])
 	clf3= SVC()
 	clf3.fit(data2+data3,[-1 for j in range(len(data2))]+[0 for j in range(len(data3))])
-	pred = [0 for in range(len(traindata))]
 	correct=0
-	for i in range(len(testdata)):
-		prediction=clf1.predict(testdata[i])
-		if(prediction==1):
-			prediction2=clf2.predict(testdata[i])
+	for j in range(len(testdata)):
+		prediction1=clf1.predict(testdata[j])
+		prediction2=clf2.predict(testdata[j])
+		prediction3=clf3.predict(testdata[j])
+		if(prediction1==1 and prediction2 == 1):
+			final=1
+		elif(prediction1==-1 and prediction3 == -1):
+			final=-1
 		else:
-			prediction2=clf3.predict(testdata[i])
-		if(prediction2==label[i]):
+			final=0
+		if(final==label[j]):
 			correct+=1
-	print "Accuracy: %.5f"%(correct/len(testdata))
+	print "Accuracy: %.5f"%(correct*1.0/len(testdata))
 	print "One versers Rest"
-	clf4= SVC()
+	clf4= SVC(probability=True)
 	clf4.fit(data1+data2+data3,[1 for j in range(len(data1))]+[0 for j in range(len(data2)+len(data3))])
-	clf5= SVC()
+	clf5= SVC(probability=True)
 	clf5.fit(data2+data1+data3,[1 for j in range(len(data2))]+[0 for j in range(len(data3)+len(data1))])
-	clf6= SVC()
+	clf6= SVC(probability=True)
 	clf6.fit(data3+data1+data2,[1 for j in range(len(data3))]+[0 for j in range(len(data1)+len(data2))])
-	pred = [0 for in range(len(traindata))]
 	correct=0
-	for i in range(len(testdata)):
-		prediction1=clf4.predict(testdata[i])
-		prediction2=clf5.predict(testdata[i])
-		prediction3=clf6.predict(testdata[i])
+	for j in range(len(testdata)):
+		final=-3
+		prediction1=clf4.predict(testdata[j])
+		prediction2=clf5.predict(testdata[j])
+		prediction3=clf6.predict(testdata[j])
 		if(prediction1==1 and prediction2==0 and prediction3==0):
 			final=1
 		elif(prediction1==0 and prediction2==1 and prediction3==0):
 			final=-1
 		elif(prediction1==0 and prediction2==0 and prediction3==1):
 			final=0
-		elif(prediction1==1 and prediction2==1):
-			final=clf1.predict(testdata[i])
-		elif(prediction2==1 and prediction3==1):
-			final=clf2.predict(testdata[i])
-		else:
-			final=clf3.predict(testdata[i])
-		if(final==label[i]):
+		if(final==label[j]):
 			correct+=1
-	print "Accuracy: %.5f"%(correct/len(testdata))
+		elif(final==-3):
+			if(prediction1==1 and prediction2==1):
+				a=clf4.predict_proba(testdata[j])[0]
+				b=clf5.predict_proba(testdata[j])[0]
+				if(a[1]>b[1]):
+					final=1
+				else:
+					final=-1
+			elif(prediction2==1 and prediction3==1):
+				a=clf5.predict_proba(testdata[j])[0]
+				b=clf6.predict_proba(testdata[j])[0]
+				if(a[1]>b[1]):
+					final=-1
+				else:
+					final=0
+			else:
+				a=clf4.predict_proba(testdata[j])[0]
+				b=clf6.predict_proba(testdata[j])[0]
+				if(a[1]>b[1]):
+					final=1
+				else:
+					final=0
+			if(final==label[j]):
+				correct+=1
+	print "Accuracy: %.5f"%(correct*1.0/len(testdata))

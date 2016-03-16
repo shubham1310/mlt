@@ -15,12 +15,10 @@ def ttdata(i):
     data=[]
     label=[]
     size=0
-    print 'train'
     for x in folder:
         npath=os.path.join(path,x)
         sfolder=os.listdir(npath)
         if(int(x[-1])%5!=i):
-            print x
             for y in sfolder:
                 if(y[:3]=='spm'):
                     label.append('1')
@@ -30,12 +28,10 @@ def ttdata(i):
                 text=f.read()
                 data.append(text)
     size=len(label)
-    print 'test'
     for x in folder:
         npath=os.path.join(path,x)
         sfolder=os.listdir(npath)
         if(int(x[-1])%5==i):
-            print x
             for y in sfolder:
                 if(y[:3]=='spm'):
                     label.append('1')
