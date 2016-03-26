@@ -109,10 +109,10 @@ for i in range(0,5):
 	clf6.fit(data3+data1+data2,[1 for j in range(len(data3))]+[0 for j in range(len(data1)+len(data2))])
 	correct=0
 	for j in range(len(testdata)):
-		final=-3
 		prediction1=clf4.predict(testdata[j])
 		prediction2=clf5.predict(testdata[j])
 		prediction3=clf6.predict(testdata[j])
+		final=-3
 		if(prediction1==1 and prediction2==0 and prediction3==0):
 			final=1
 		elif(prediction1==0 and prediction2==1 and prediction3==0):

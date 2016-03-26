@@ -18,3 +18,6 @@ Standard formulation
 Batch number 4 as the test data the accuracy is:  0.8653
 Hinge Loss
 Batch number 4  as the test data the accuracy is:  0.9827
+
+Standard formulation Average: 0.8609
+Hinge Loss Average: 0.9845
